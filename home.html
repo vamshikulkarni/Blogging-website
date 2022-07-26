@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog : Homepage</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="like.js"></script>
+   
+  </head>
+  <body ng-app="ngclickApp1">
+    
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light ">
+      <img src="img/logo.png" class="logo" alt="" />
+      <ul class="links-container">
+          <li class="link-item"><a href="home.html" class="link">home</a></li>
+          <li class="link-item"><a href="editor.html" class="link">editor</a></li>
+        </ul>
+        
+        <div class="dropdown ">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+            Blogs
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#blogs">Blog 1</a></li>
+            <li><a class="dropdown-item" href="#blogs">Blog 2</a></li>
+            <li><a class="dropdown-item" href="#">Blog 3</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+      
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <header class="header"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+            url(img/header.jpg);">
+                    <div class="content">
+                        <h1 class="heading">
+                            The world of blog writing
+                        </h1>
+                        <a href="editor.html" class="btn btn-outline-primary m-20">write a blog</a>
+                    </div>
+            </header>
+          </div>
+          <div class="carousel-item">
+            <header class="header"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+            url(img/img1.jpeg);">
+                <div class="content">
+                    <h1 class="heading">
+                        The world of blog writing
+                    </h1>
+                    <a href="editor.html" class="btn btn-outline-primary m-20">write a blog</a>
+                </div>
+            </header>
+          </div>
+          <div class="carousel-item">
+            <header class="header"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+            url(img/img2.jpg);">
+                <div class="content">
+                    <h1 class="heading">
+                        The world of blog writing
+                    </h1>
+                    <a href="editor.html" class="btn btn-outline-primary m-20">write a blog</a>
+                </div>
+            </header>
+          </div>
+        </div>
+      
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    <!-- blog section -->
+    
+    <section class="blogs-section"id="blogs">
+      <div class="blog-card" >
+        <img src="img/img3.jpg" class="blog-image" alt="">
+        <h1 class="blog-title">Losing faith in humanity</h1>
+        <!-- <p class="blog-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.</p> -->
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-pressed="true"aria-expanded="false" aria-controls="multiCollapseExample1">read</a><br>
+        <div ng-controller="ngclickCtrl1">
+          <input type="button" class="btn btn-sm btn-primary"style="cursor:pointer" value="Like" 
+                 ng-click="getdetails1()" />
+          <span style="color:darkorchid"> {{clkcount1}} </span>
+      </div>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body" >
+            Those who have read this blog on a regular basis know that I lost my faith in religious dogma long ago.  Now, sadly,
+             I am beginning to lose my faith in humanity; the reasons
+             are numerous and varied.At the core of most is the willingness of individuals to accept the rhetoric of self-absorbed 
+             politicians and religious leaders; by doing so, they amplify conspiracy theories and derail efforts to address climate change,
+              human rights, racism and economic fairness.  We have seen this ongoing battle between mysticism and science lead to the distrust of
+               public health officials, resulting in unnecessary deaths and chronic illness throughout the Covid pandemic. 
+                We have also observed the consequences of misinformation and witnessed the imposition of religious philosophy on citizens,
+                 school systems and private corporations.  At the International level, dictators, unchallenged by their own military and
+                  citizenry, stage wars, practice genocide and suppress dissent.Many humans believe that we were placed on Earth to provide stewardship;
+                   if so, we have failed miserably.  The ongoing destruction of natural habitat, the poisoning of natural ecosystems and the induction of global warming have threatened the welfare of our planet and its inhabitants (including our own species).  Of course, the most consequential victim of our troubled reign has been truth.
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="blog-card">
+          <img src="img/img7.jpg" class="blog-image" alt="">
+          <h1 class="blog-title">Hey you! Stop phubbing</h1>
+          <!-- <p class="blog-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.</p> -->
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">read</a>
+          <div ng-controller="ngclickCtrl1">
+            <input type="button" class="btn btn-sm btn-primary"style="cursor:pointer" value="Like" 
+                   ng-click="getdetails1()" />
+            <span style="color:darkorchid"> {{clkcount1}} </span>
+        </div>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+              Gadgets have become so indispensable in our lives that it is difficult to imagine a day without the phone next to us. 
+              They make our lives easier, by bringing the information a click away, and most importantly, they keep us connected.
+               Due to COVID, the social distancing made us realize how important friends and family are in our lives, therefore we should be grateful for 
+               applications such as Skype, Zoom or Google Hangouts that are helping us keep in touch. 
+              Just imagine a pandemic without internet. Scary scenario, huh?             
+              A concept that very few have heard of, but many of us recognize once we read its definition, is called phubbing (phone + snubbing = phubbing).
+              
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="blog-card">
+        <img src="img/img5.jpg"class="blog-image"alt="">
+        <h1 class="blog-title">Connecting to Care</h1>
+        <a class="btn btn-primary"data-bs-toggle="collapse"href="#multiCollapseExample3"role="buton"aria-expanded="false"aria-controls="multiCollapseExample3">read </a>
+      
+        <div ng-controller="ngclickCtrl1">
+          <input type="button" class="btn btn-sm btn-primary"style="cursor:pointer" value="Like" 
+                 ng-click="getdetails1()" />
+          <span style="color:darkorchid"> {{clkcount1}} </span>
+      </div>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse"id="multiCollapseExample3">
+              <div class="card card-body">
+                The absence of a deep emotional connection between humans and the natural world is at the root of the environmental crisis.
+                Can you think of a place in nature that you know really well?
+               Close your eyes for a moment and see what comes up.
+               Can you visualise the place in exquisite detail? The sounds, the colours, the smells, the subtleties that only you know.
+              Do memories surface? Perhaps you have known this place for a long time. Maybe you spent golden moments from your childhood here? 
+              There might be happy memories tinged with sadness or regret?How does it feel when you bring this place to mind now?
+              Please don’t rush. Take a moment to connect
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="img/img6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Technology</h5>
+          <p class="card-text">technology, the application of scientific knowledge to the practical aims of human life or, as it is sometimes phrased, to the change and manipulation of the human environment.</p>
+          <a href="#" class="btn btn-primary">read</a>
+          <div ng-controller="ngclickCtrl1">
+            <input type="button" class="btn btn-sm btn-primary"style="cursor:pointer" value="Like" 
+                   ng-click="getdetails1()" />
+            <span style="color:darkorchid"> {{clkcount1}} </span>
+        </div>
+        
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+    <div class="container-fluid">
+      <!-- Footer -->
+      <footer
+              class="text-center text-lg-start text-white"
+              style="background-color: #45526e"
+              >
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Links -->
+          <section class="">
+            <!--Grid row-->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                  Blog
+                </h6>
+                <p>
+                 
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <hr class="w-100 clearfix d-md-none" />
+    
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold"></h6>
+                <p>
+                  <a class="text-white">LETTERS</a>
+                </p>
+                <p>
+                  <a class="text-white">WordPress</a>
+                </p>
+                <p>
+                  <a class="text-white">BrandFlow</a>
+                </p>
+                <p>
+                  <a class="text-white"></a>
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <hr class="w-100 clearfix d-md-none" />
+    
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                  Useful links
+                </h6>
+                <p>
+                  <a class="text-white">Your Account</a>
+                </p>
+                <p>
+                  <a class="text-white"></a>
+                </p>
+                <p>
+                  <a class="text-white"></a>
+                </p>
+                <p>
+                  <a class="text-white">Help</a>
+                </p>
+              </div>
+    
+              <!-- Grid column -->
+              <hr class="w-100 clearfix d-md-none" />
+    
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="fas fa-home mr-3"></i> </p>
+                <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                <p><i class="fas fa-phone mr-3"></i> 01 234 567 88</p>
+                <p><i class="fas fa-print mr-3"></i> 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
+    
+          <hr class="my-3">
+    
+          <!-- Section: Copyright -->
+          <section class="p-3 pt-0">
+            <div class="row d-flex align-items-center">
+              <!-- Grid column -->
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <!-- Copyright -->
+                <div class="p-3">
+                  
+                  <a class="text-white" href="https://mdbootstrap.com/"
+                     ></a
+                    >
+                </div>
+                <!-- Copyright -->
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <!-- Facebook -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-facebook-f"></i
+                  ></a>
+    
+                <!-- Twitter -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-twitter"></i
+                  ></a>
+    
+                <!-- Google -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-google"></i
+                  ></a>
+    
+                <!-- Instagram -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-instagram"></i
+                  ></a>
+              </div>
+              <!-- Grid column -->
+            </div>
+          </section>
+          <!-- Section: Copyright -->
+        </div>
+        <!-- Grid container -->
+      </footer>
+      <!-- Footer -->
+    </div>
+    <!-- End of .container -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/home.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
+  </body>
+</html>
